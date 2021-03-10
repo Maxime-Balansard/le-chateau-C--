@@ -73,3 +73,20 @@ string Personnage::getCroyance(){
     return croyance;
 }
 
+
+
+void Personnage::fiche()
+{
+    cout << endl;
+	cout << "Fiche de " << getNom() << endl;
+	cout << "Pv : " << getPv() << endl;
+	cout << "Attaque : " << getAtk() << endl;
+	cout << "Armure : " << getArmure() << endl;
+	cout << "Chance de Bloquer : " << getBlocage() << endl;
+	cout << "Chance de Coup Critique : " << getCritique() << endl;
+	cout << "Chance d'Esquiver : " << getEsquive() << endl;
+	cout << "Resistance aux Attaques Magiques : " << getResistancemagique() << endl;
+	cout << "Degres de Corruption : " << getCorruption() << endl;
+	cout << "Fidèle du Culte " << getCroyance() << endl;
+	cout << "Sans classe" << endl;
+}

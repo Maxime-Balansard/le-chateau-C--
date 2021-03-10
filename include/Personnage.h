@@ -29,6 +29,7 @@ class Personnage
         //Destructeur
         ~Personnage();
 
+        //getter setter
         string getNom();
         void setNom(string);
 
@@ -58,6 +59,11 @@ class Personnage
 
         string getCroyance();
         void setCroyance(string);
+
+    //fonctions
+    void fiche();
 };
+
+
 
 #endif // PERSONNAGE_H

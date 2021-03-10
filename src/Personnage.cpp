@@ -1,5 +1,6 @@
 #include "Personnage.h"
 
+//Classe Personnage
 Personnage::Personnage()
 {
         nom = "PeonPremierduNom";
@@ -14,6 +15,7 @@ Personnage::Personnage()
         croyance = "Materialiste";
 }
 
+//setter
 Personnage::Personnage(string n, int p, int a, int ar, float b, float c, float e, int rm, int co, string cr)
 {
     setNom(n);
@@ -28,11 +30,13 @@ Personnage::Personnage(string n, int p, int a, int ar, float b, float c, float e
     setCroyance(cr);
 }
 
+//destructeur
 Personnage::~Personnage()
 {
     cout<< getNom()<< " nous a quitte. Paix a son ame..." <<endl <<endl;
 }
 
+//getter
 string Personnage::getNom(){
     return nom;
 }
@@ -73,8 +77,37 @@ string Personnage::getCroyance(){
     return croyance;
 }
 
+void Personnage::setNom(string n){
+    nom = n;
+}
+
+//borner les données rentrées
+void Personnage::setPv(int p){
+    if (p < 0) {
+        cerr << getNom() << "Montant de point de vie incorrect" << endl << endl;
+        pv = 0;
+        this->~Personnage();
+    }
+    else {
+    pv = p;
+    }
+}
+
+//dans un if, utiliser "or" pour 2 conditions à la fois
+void Personnage::setAtk(int a){
+    if (a < 0) {
+        cerr << getNom() << "Attaque incorrecte" << endl << endl;
+        a = 0;
+        this->~Personnage();
+    }
+    else{
+        atk = a;
+    }
+}
+//faire ceci avec toutes les autres stats, ou pas selon le jeu qu'on a prevu
 
 
+//fonction pour afficher toutes les infos d'un perso
 void Personnage::fiche()
 {
     cout << endl;

@@ -104,6 +104,34 @@ void Personnage::setAtk(int a){
         atk = a;
     }
 }
+
+void Personnage::setArmure(int ar){
+    armure = ar;
+}
+
+void Personnage::setBlocage(float b){
+    blocage = b;
+}
+
+void Personnage::setCritique(float c){
+    critique = c;
+}
+
+void Personnage::setEsquive(float e){
+    esquive = e;
+}
+
+void Personnage::setResistancemagique(int rm){
+    resistancemagique = rm;
+}
+
+void Personnage::setCorruption(int co){
+    corruption = co;
+}
+
+void Personnage::setCroyance(string cr){
+    croyance = cr;
+}
 //faire ceci avec toutes les autres stats, ou pas selon le jeu qu'on a prevu
 
 
@@ -120,6 +148,6 @@ void Personnage::fiche()
 	cout << "Chance d'Esquiver : " << getEsquive() << endl;
 	cout << "Resistance aux Attaques Magiques : " << getResistancemagique() << endl;
 	cout << "Degres de Corruption : " << getCorruption() << endl;
-	cout << "Fidèle du Culte " << getCroyance() << endl;
+	cout << "Fidele du Culte " << getCroyance() << endl;
 	cout << "Sans classe" << endl;
 }

@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1615372492 source:c:\githubdestop\le-chateau-c--\main.cpp
+	"Personnage.h"
+
+1615372475 c:\githubdestop\le-chateau-c--\include\personnage.h
+	<string>
+	<iostream>
+
+1615372181 source:c:\githubdestop\le-chateau-c--\src\personnage.cpp
+	"Personnage.h"
+

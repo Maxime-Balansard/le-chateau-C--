@@ -3,7 +3,7 @@
 
 #include <string>
 #include <iostream>
-
+using namespace std;
 
 class Personnage
 {
@@ -14,8 +14,8 @@ class Personnage
         int atk = 1;
         int armure = 0;
         float blocage = 0;
-        float critique = 5;
-        float esquive = 5;
+        float critique = 0.05;
+        float esquive = 0.05;
         int resistancemagique = 0;
         int corruption = 0;
         string croyance = "Materialiste";

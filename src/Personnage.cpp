@@ -12,11 +12,11 @@ Personnage::Personnage()
         esquive = 5;
         resistancemagique = 0;
         corruption = 0;
-        croyance = "Materialiste";
+        croyance = Materialiste;
 }
 
 //setter
-Personnage::Personnage(string n, int p, int a, int ar, float b, float c, float e, int rm, int co, string cr)
+Personnage::Personnage(string n, int p, int a, int ar, float b, float c, float e, int rm, int co, Croyance cr)
 {
     setNom(n);
     setPv(p);
@@ -73,7 +73,7 @@ int Personnage::getCorruption(){
     return corruption;
 }
 
-string Personnage::getCroyance(){
+Croyance Personnage::getCroyance(){
     return croyance;
 }
 
@@ -129,7 +129,7 @@ void Personnage::setCorruption(int co){
     corruption = co;
 }
 
-void Personnage::setCroyance(string cr){
+void Personnage::setCroyance(Croyance cr){
     croyance = cr;
 }
 //faire ceci avec toutes les autres stats, ou pas selon le jeu qu'on a prevu
@@ -151,3 +151,7 @@ void Personnage::fiche()
 	cout << "Fidele du Culte " << getCroyance() << endl;
 	cout << "Sans classe" << endl;
 }
+
+/*void Personnage::attack(Personnage & cible){
+    cible.setPv(cible.getPv() - (getAtk() + arme.getDegats());
+}*/

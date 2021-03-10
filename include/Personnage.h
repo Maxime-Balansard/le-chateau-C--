@@ -3,7 +3,10 @@
 
 #include <string>
 #include <iostream>
+#include "Arme.h"
 using namespace std;
+
+enum Croyance{Materialiste,Mage,Lumiere,};
 
 class Personnage
 {
@@ -18,12 +21,13 @@ class Personnage
         float esquive = 0.05;
         int resistancemagique = 0;
         int corruption = 0;
-        string croyance = "Materialiste";
+        Croyance croyance = Materialiste;
+        Arme* arme;
 
     public:
         //Constructeur
         Personnage();
-        Personnage(string, int, int, int, float, float, float, int, int, string);
+        Personnage(string, int, int, int, float, float, float, int, int, Croyance);
 
 
         //Destructeur
@@ -57,11 +61,12 @@ class Personnage
         int getCorruption();
         void setCorruption(int);
 
-        string getCroyance();
-        void setCroyance(string);
+        Croyance getCroyance();
+        void setCroyance(Croyance);
 
     //fonctions
     void fiche();
+    void attack(Personnage &cible);
 };
 
 

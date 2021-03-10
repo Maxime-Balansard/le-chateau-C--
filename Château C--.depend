@@ -1,18 +1,15 @@
 # depslib dependency file v1.0
-1615375440 source:c:\githubdestop\le-chateau-c--\main.cpp
+1615372492 source:c:\githubdestop\le-chateau-c--\main.cpp
 	"Personnage.h"
 
-1615375839 c:\githubdestop\le-chateau-c--\include\personnage.h
+1615372475 c:\githubdestop\le-chateau-c--\include\personnage.h
 	<string>
 	<iostream>
-	"Arme.h"
 
+<<<<<<< HEAD
 1615375872 source:c:\githubdestop\le-chateau-c--\src\personnage.cpp
+=======
+1615372181 source:c:\githubdestop\le-chateau-c--\src\personnage.cpp
+>>>>>>> parent of eaaeba9... Introduction du enum et armes
 	"Personnage.h"
-
-1615373379 source:c:\githubdestop\le-chateau-c--\src\arme.cpp
-	"Arme.h"
-
-1615373566 c:\githubdestop\le-chateau-c--\include\arme.h
-	<string>
 

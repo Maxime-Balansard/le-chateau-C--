@@ -9,27 +9,27 @@ class Arme
 {
     private:
         int degats;
-        int portee;
+        int dm;
         string type;
-        int niveauRequis;
-        float prix;
+        int prix;
+        float coefCrit;
 
     public:
         Arme();
-        Arme(int,int,string,int,float);
+        Arme( int, int,string,int, float);
         virtual ~Arme();
 
         int getDegats();
-        int getPortee();
+        int getDm();
         string getType();
-        int getNiveauRequis();
-        float getPrix();
+        int getPrix();
+        float get coefCrit();
 
         void setDegats(int);
-        void setPortee(int);
+        void setDm(int);
         void setType(string);
-        void setNiveauRequis(int);
-        void setPrix(float);
+        void setPrix(int);
+        void setcoefCrit(float);
 
 };
 

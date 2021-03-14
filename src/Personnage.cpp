@@ -5,6 +5,7 @@ Personnage::Personnage()
 {
         nom = "PeonPremierduNom";
         pv = 10;
+        monnaie = 5;
         atk = 1;
         armure = 0;
         blocage = 0;
@@ -16,9 +17,10 @@ Personnage::Personnage()
 }
 
 //setter
-Personnage::Personnage(string n, int p, int a, int ar, float b, float c, float e, int rm, int co, Croyance cr)
+Personnage::Personnage(string n,int m, int p, int a, int ar, float b, float c, float e, int rm, int co, Croyance cr)
 {
     setNom(n);
+    setMonnaie(m);
     setPv(p);
     setAtk(a);
     setArmure(ar);
@@ -43,6 +45,9 @@ string Personnage::getNom(){
 
 int Personnage::getPv(){
     return pv;
+}
+int Personnage::getMonnaie(){
+    return monnaie;
 }
 
 int Personnage::getAtk(){
@@ -108,6 +113,10 @@ void Personnage::setAtk(int a){
 void Personnage::setArmure(int ar){
     armure = ar;
 }
+void Personnage::setMonnaie(int m){
+    monnaie = m;
+}
+
 
 void Personnage::setBlocage(float b){
     blocage = b;
@@ -141,6 +150,7 @@ void Personnage::fiche()
     cout << endl;
 	cout << "Fiche de " << getNom() << endl;
 	cout << "Pv : " << getPv() << endl;
+	cout << "Monnaie : " << getMonnaie() << endl;
 	cout << "Attaque : " << getAtk() << endl;
 	cout << "Armure : " << getArmure() << endl;
 	cout << "Chance de Bloquer : " << getBlocage() << endl;

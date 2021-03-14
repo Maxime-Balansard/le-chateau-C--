@@ -1,11 +1,11 @@
-#include "Arme.h"
+#include "arme.h"
 
-Arme::Arme()
+arme::arme()
 {
     //ctor
 }
 
-Arme::~Arme()
+arme::~arme()
 {
     //dtor
 }

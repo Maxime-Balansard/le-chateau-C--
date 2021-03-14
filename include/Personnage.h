@@ -14,6 +14,7 @@ class Personnage
         //caractéristiques de base
         string nom = "PeonPremierduNom";
         int pv = 10;
+        int monnaie = 5;
         int atk = 1;
         int armure = 0;
         float blocage = 0;
@@ -27,7 +28,7 @@ class Personnage
     public:
         //Constructeur
         Personnage();
-        Personnage(string, int, int, int, float, float, float, int, int, Croyance);
+        Personnage(string,int, int, int, int, float, float, float, int, int, Croyance);
 
 
         //Destructeur
@@ -39,6 +40,9 @@ class Personnage
 
         int getPv();
         void setPv(int);
+
+        int getMonnaie();
+        void setMonnaie(int);
 
         int getAtk();
         void setAtk(int);

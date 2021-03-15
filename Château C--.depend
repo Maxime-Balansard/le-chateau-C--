@@ -6,10 +6,33 @@
 	<string>
 	<iostream>
 
-<<<<<<< HEAD
-1615375872 source:c:\githubdestop\le-chateau-c--\src\personnage.cpp
-=======
+1615372475 D
+
 1615372181 source:c:\githubdestop\le-chateau-c--\src\personnage.cpp
->>>>>>> parent of eaaeba9... Introduction du enum et armes
+
+1615372181 ent of eaaeba9... Introduction du enum et armes
 	"Personnage.h"
+
+1615822990 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\main.cpp
+	"Personnage.h"
+
+1615746990 f:\ecole\algo\aventure textuelle\le-chateau-c---main\include\personnage.h
+	<string>
+	<iostream>
+	"Arme.h"
+
+1615822920 f:\ecole\algo\aventure textuelle\le-chateau-c---main\include\arme.h
+	<string>
+
+1615749744 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\src\guerrier.cpp
+	"Guerrier.h"
+
+1615749735 f:\ecole\algo\aventure textuelle\le-chateau-c---main\include\guerrier.h
+	"Personnage.h"
+
+1615746921 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\src\personnage.cpp
+	"Personnage.h"
+
+1615822910 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\src\arme.cpp
+	"Arme.h"
 

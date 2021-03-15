@@ -1,18 +1,19 @@
+#include "Arme.h"
 Arme::Arme()
 {
     setDegats(10);
     setDegatsM(0);
     setType("normal");
-    setcoefCrit(0);
+    setCoefCrit(0);
     setPrix(0);
 }
 
-Arme::Arme(int d,int dm,string t,float cc,float pr){
+Arme::Arme(int d,int dm,string t,int pr,float cc){
     setDegats(d);
     setDegatsM(dm);
     setType(t);
     setPrix(pr);
-    setcoefCrit(cc);
+    setCoefCrit(cc);
 }
 
 Arme::~Arme()
@@ -25,7 +26,7 @@ int Arme::getDegats(){
 }
 
 int Arme::getDegatsM(){
-    return dm;
+    return degatsM;
 }
 
 string Arme::getType(){
@@ -34,10 +35,10 @@ string Arme::getType(){
 
 
 float Arme::getCoefCrit(){
-    return coefCrit;
+    return CoefCrit;
 }
 
-float Arme::getPrix(){
+int Arme::getPrix(){
     return prix;
 }
 
@@ -53,10 +54,10 @@ void Arme::setType(string t){
     type = t;
 }
 
-void Arme::setcoefCrit(float cc){
-    coefCrit = cc;
+void Arme::setCoefCrit(float cc){
+    CoefCrit = cc;
 }
 
-void Arme::setPrix(float p){
+void Arme::setPrix(int p){
     prix = p;
 }

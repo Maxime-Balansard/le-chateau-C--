@@ -13,10 +13,11 @@
 1615372181 ent of eaaeba9... Introduction du enum et armes
 	"Personnage.h"
 
-1615822990 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\main.cpp
+1615825933 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\main.cpp
 	"Personnage.h"
+	"chevalier_de_la_rosette.h"
 
-1615746990 f:\ecole\algo\aventure textuelle\le-chateau-c---main\include\personnage.h
+1615824819 f:\ecole\algo\aventure textuelle\le-chateau-c---main\include\personnage.h
 	<string>
 	<iostream>
 	"Arme.h"
@@ -27,12 +28,18 @@
 1615749744 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\src\guerrier.cpp
 	"Guerrier.h"
 
-1615749735 f:\ecole\algo\aventure textuelle\le-chateau-c---main\include\guerrier.h
+1615823214 f:\ecole\algo\aventure textuelle\le-chateau-c---main\include\guerrier.h
 	"Personnage.h"
 
-1615746921 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\src\personnage.cpp
+1615824817 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\src\personnage.cpp
 	"Personnage.h"
 
 1615822910 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\src\arme.cpp
 	"Arme.h"
+
+1615826055 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\src\chevalier_de_la_rosette.cpp
+	"chevalier_de_la_rosette.h"
+
+1615826055 f:\ecole\algo\aventure textuelle\le-chateau-c---main\include\chevalier_de_la_rosette.h
+	"Personnage.h"
 

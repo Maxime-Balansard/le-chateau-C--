@@ -13,7 +13,7 @@ Personnage::Personnage()
         esquive = 5;
         resistancemagique = 0;
         corruption = 0;
-        croyance = Materialiste;
+        croyance = Mezoreth;
 }
 
 //setter

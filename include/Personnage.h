@@ -6,7 +6,7 @@
 #include "Arme.h"
 using namespace std;
 
-enum Croyance{Materialiste,Mage,Lumiere,};
+enum Croyance{Mezoreth,Luminark,Shadark,Pyriis};
 
 class Personnage
 {
@@ -22,7 +22,7 @@ class Personnage
         float esquive = 0.05;
         int resistancemagique = 0;
         int corruption = 0;
-        Croyance croyance = Materialiste;
+        Croyance croyance = Mezoreth;
         Arme* arme;
 
     public:

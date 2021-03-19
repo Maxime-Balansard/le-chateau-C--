@@ -239,12 +239,12 @@ void Personnage::attaque(Personnage* cible){
 
     else {
 
-        cout<< getNom() << " inflige " << ((getAtk() /*+ arme.getDegats()*/ - (getCorruption()*3))*(1-(cible->getArmure()%100))) << " degats!"<< endl;
-        cible->setPv (cible->getPv() - ((getAtk() /*+ arme.getDegats()*/ - (getCorruption()*3))*(1-(cible->getArmure()%100))));
+        cout<< getNom() << " inflige " << ((getAtk() /*+ arme.getDegats()*/ - (getCorruption()*3))*(1-(cible->getArmure()/100))) << " degats!"<< endl;
+        cible->setPv (cible->getPv() - ((getAtk() /*+ arme.getDegats()*/ - (getCorruption()*3))*(1-(cible->getArmure()/100))));
 
     }
 
-    //perte pv = (atk + degat - corruption) * (1-(armure/100))
+    //montant de degats totaux = (atk + degat - corruption) * (1-(armure/100))
 
     /*armure =10
 

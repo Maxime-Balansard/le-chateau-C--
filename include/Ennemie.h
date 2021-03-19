@@ -8,7 +8,7 @@ class Ennemie : public Personnage
 {
     public:
         Ennemie();
-         Ennemie(string,int, int, int, int, float, float, float, int, int, Croyance);
+         Ennemie(string,int, int, int, int, float, float, float, int, int, int);
         void showInfoEnnemie();
 
     protected:

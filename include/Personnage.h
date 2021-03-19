@@ -3,15 +3,21 @@
 
 #include <string>
 #include <iostream>
+#include <vector>
+
 #include "Arme.h"
 using namespace std;
 
-enum Croyance{Mezoreth,Luminark,Shadark,Pyriis};
+
 
 class Personnage
 {
     private:
+
+
         //caractéristiques de base
+
+        vector<string> tabCroyance{"Mezoreth","Luminark","Shadark","Pyriis"};
         string nom = "PeonPremierduNom";
         int pv = 10;
         int monnaie = 5;
@@ -22,13 +28,13 @@ class Personnage
         float esquive = 0.05;
         int resistancemagique = 0;
         int corruption = 0;
-        Croyance croyance = Mezoreth;
+        string croyance = tabCroyance[0];
         Arme* arme;
 
     public:
         //Constructeur
         Personnage();
-        Personnage(string,int, int, int, int, float, float, float, int, int, Croyance);
+        Personnage(string,int, int, int, int, float, float, float, int, int, int);
 
 
         //Destructeur
@@ -65,8 +71,8 @@ class Personnage
         int getCorruption();
         void setCorruption(int);
 
-        Croyance getCroyance();
-        void setCroyance(Croyance);
+        string getCroyance();
+        void setCroyance(int);
 
     //fonctions
     void fiche();

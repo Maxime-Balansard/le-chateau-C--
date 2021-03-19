@@ -8,7 +8,7 @@ class chevalier_de_la_rosette: public Personnage
 {
     public:
         chevalier_de_la_rosette();
-        chevalier_de_la_rosette(string,int, int, int, int, float, float, float, int, int, Croyance);
+        chevalier_de_la_rosette(string,int, int, int, int, float, float, float, int, int, int);
 
         void showInfoChevalier_de_la_rosette();
 

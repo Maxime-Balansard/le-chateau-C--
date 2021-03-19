@@ -13,11 +13,11 @@ Personnage::Personnage()
         esquive = 5;
         resistancemagique = 0;
         corruption = 0;
-        croyance = Mezoreth;
+        croyance = tabCroyance[0];
 }
 
 //setter
-Personnage::Personnage(string n,int m, int p, int a, int ar, float b, float c, float e, int rm, int co, Croyance cr)
+Personnage::Personnage(string n,int m, int p, int a, int ar, float b, float c, float e, int rm, int co, int cr)
 {
     setNom(n);
     setMonnaie(m);
@@ -78,7 +78,7 @@ int Personnage::getCorruption(){
     return corruption;
 }
 
-Croyance Personnage::getCroyance(){
+string Personnage::getCroyance(){
     return croyance;
 }
 
@@ -89,7 +89,7 @@ void Personnage::setNom(string n){
 //borner les données rentrées
 void Personnage::setPv(int p){
     if (p < 0) {
-        cerr << getNom() << "Montant de point de vie incorrect" << endl << endl;
+        cerr << getNom() << " a un montant de point de vie incorrect" << endl << endl;
         pv = 0;
         this->~Personnage();
     }
@@ -100,9 +100,9 @@ void Personnage::setPv(int p){
 
 //dans un if, utiliser "or" pour 2 conditions à la fois
 void Personnage::setAtk(int a){
-    if (a < 0) {
-        cerr << getNom() << "Attaque incorrecte" << endl << endl;
-        a = 0;
+    if (a < 1) {
+        cerr << getNom() << " a un montant d'Attaque incorrecte" << endl << endl;
+        atk = 1;
         this->~Personnage();
     }
     else{
@@ -111,35 +111,87 @@ void Personnage::setAtk(int a){
 }
 
 void Personnage::setArmure(int ar){
+    if (ar < 0) {
+        cerr << getNom() << " a un montant d'Armure incorrect" << endl << endl;
+        armure = 0;
+    }
+    else if (ar > 50) {
+        cerr << getNom() << " a atteint le Montant d'Armure maximum" << endl << endl;
+        armure = 50;
+    }
+    else{
     armure = ar;
+    }
 }
 void Personnage::setMonnaie(int m){
+    if (m < 0) {
+        cerr << getNom() << " est fauché" << endl << endl;
+        monnaie = 0;
+    }
     monnaie = m;
 }
 
-
 void Personnage::setBlocage(float b){
+    if (b < 0.0 or b > 0.50) {
+        cerr << "Chances de bloquer incorrectes" << endl << endl;
+        blocage = 0.0;
+    }
     blocage = b;
 }
 
 void Personnage::setCritique(float c){
+    if (c < 0.0 or c > 1.0) {
+        cerr << "Chances de critique incorrectes" << endl << endl;
+        critique = 0.0;
+    }
     critique = c;
 }
 
 void Personnage::setEsquive(float e){
+    if (e < 0.0 or e > 0.50) {
+        cerr << "Chances d'esquive incorrectes" << endl << endl;
+        esquive = 0.0;
+    }
     esquive = e;
 }
 
 void Personnage::setResistancemagique(int rm){
+   if (rm < 0) {
+        cerr << getNom() << " a un montant de resistance magique incorrect" << endl << endl;
+        resistancemagique = 0;
+    }
+    else if (rm > 50) {
+        cerr << getNom() << " a atteint le Montant de Resistance magique maximum" << endl << endl;
+        resistancemagique = 50;
+    }
+    else{
     resistancemagique = rm;
+    }
 }
 
 void Personnage::setCorruption(int co){
+    if (co < 0) {
+        cerr << getNom() << " est devenu aussi pur que la lumiere" << endl << endl;
+        corruption = 0;
+    }
+    else if (co > 5) {
+        cerr << "La corruption a envahit l'esprit de " << getNom() << " et son energie vitale a ete aspiree." << endl << endl;
+        corruption = 5;
+        this->~Personnage();
+    }
+    else {
     corruption = co;
+    }
 }
 
-void Personnage::setCroyance(Croyance cr){
-    croyance = cr;
+void Personnage::setCroyance(int index){
+    if (index < 0 || index > 3) {
+        cerr << "Mauvais index, " << getNom() <<" va recevoir une croyance aléatoire parmis celles existantes." << endl << endl;
+        index = rand() % 4;
+        croyance = tabCroyance[index];
+    } else {
+    croyance = tabCroyance[index];
+    }
 }
 //faire ceci avec toutes les autres stats, ou pas selon le jeu qu'on a prevu
 

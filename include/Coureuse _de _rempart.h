@@ -1,15 +1,15 @@
-#ifndef COUREUSE _DE _REMPART_H
-#define COUREUSE _DE _REMPART_H
+#ifndef COUREUSE_DE_REMPART_H
+#define COUREUSE_DE_REMPART_H
 
 #include <Personnage.h>
 
 
-class Coureuse _de _rempart : public Personnage
+class Coureuse_de_rempart : public Personnage
 {
     public:
-        Coureuse _de _rempart();
-        Coureuse _de _rempart(string,int, int, int, int, float, float, float, int, int, Croyance);
-        void showInfoCoureuse _de _rempart ();
+        Coureuse_de_rempart();
+        Coureuse_de_rempart(string,int, int, int, int, float, float, float, int, int, int);
+        void showInfoCoureuse_de_rempart ();
     protected:
 
     private:

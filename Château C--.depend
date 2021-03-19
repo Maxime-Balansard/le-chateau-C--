@@ -13,13 +13,16 @@
 1615372181 ent of eaaeba9... Introduction du enum et armes
 	"Personnage.h"
 
-1615825933 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\main.cpp
+1615981953 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\main.cpp
 	"Personnage.h"
 	"chevalier_de_la_rosette.h"
+	<random>
+	<ctime>
 
-1615824819 f:\ecole\algo\aventure textuelle\le-chateau-c---main\include\personnage.h
+1615981953 f:\ecole\algo\aventure textuelle\le-chateau-c---main\include\personnage.h
 	<string>
 	<iostream>
+	<vector>
 	"Arme.h"
 
 1615822920 f:\ecole\algo\aventure textuelle\le-chateau-c---main\include\arme.h
@@ -31,15 +34,33 @@
 1615823214 f:\ecole\algo\aventure textuelle\le-chateau-c---main\include\guerrier.h
 	"Personnage.h"
 
-1615824817 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\src\personnage.cpp
+1615981863 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\src\personnage.cpp
 	"Personnage.h"
 
 1615822910 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\src\arme.cpp
 	"Arme.h"
 
-1615826055 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\src\chevalier_de_la_rosette.cpp
+1615980112 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\src\chevalier_de_la_rosette.cpp
 	"chevalier_de_la_rosette.h"
 
-1615826055 f:\ecole\algo\aventure textuelle\le-chateau-c---main\include\chevalier_de_la_rosette.h
+1615980129 f:\ecole\algo\aventure textuelle\le-chateau-c---main\include\chevalier_de_la_rosette.h
 	"Personnage.h"
+
+1615980192 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\src\foutriquet_magicien.cpp
+	"Foutriquet_magicien.h"
+
+1615980202 f:\ecole\algo\aventure textuelle\le-chateau-c---main\include\foutriquet_magicien.h
+	<Personnage.h>
+
+1615980184 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\src\coureuse _de _rempart.cpp
+	"Coureuse _de _rempart.h"
+
+1615980184 f:\ecole\algo\aventure textuelle\le-chateau-c---main\include\coureuse _de _rempart.h
+	<Personnage.h>
+
+1615980141 source:f:\ecole\algo\aventure textuelle\le-chateau-c---main\src\ennemie.cpp
+	"Ennemie.h"
+
+1615980154 f:\ecole\algo\aventure textuelle\le-chateau-c---main\include\ennemie.h
+	<Personnage.h>
 

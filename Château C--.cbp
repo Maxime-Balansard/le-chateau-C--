@@ -35,11 +35,19 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Arme.h" />
+		<Unit filename="include/Coureuse _de _rempart.h" />
+		<Unit filename="include/Ennemie.h" />
+		<Unit filename="include/Foutriquet_magicien.h" />
 		<Unit filename="include/Personnage.h" />
+		<Unit filename="include/chevalier_de_la_rosette.h" />
 		<Unit filename="include/guerrier.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Arme.cpp" />
+		<Unit filename="src/Coureuse _de _rempart.cpp" />
+		<Unit filename="src/Ennemie.cpp" />
+		<Unit filename="src/Foutriquet_magicien.cpp" />
 		<Unit filename="src/Personnage.cpp" />
+		<Unit filename="src/chevalier_de_la_rosette.cpp" />
 		<Unit filename="src/guerrier.cpp" />
 		<Extensions />
 	</Project>

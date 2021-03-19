@@ -17,11 +17,11 @@ Personnage::Personnage()
 }
 
 //setter
-Personnage::Personnage(string n,int m, int p, int a, int ar, float b, float c, float e, int rm, int co, int cr)
+Personnage::Personnage(string n,int p, int m, int a, int ar, float b, float c, float e, int rm, int co, int cr)
 {
     setNom(n);
-    setMonnaie(m);
     setPv(p);
+    setMonnaie(m);
     setAtk(a);
     setArmure(ar);
     setBlocage(b);
@@ -35,7 +35,7 @@ Personnage::Personnage(string n,int m, int p, int a, int ar, float b, float c, f
 //destructeur
 Personnage::~Personnage()
 {
-    cout<< getNom()<< " nous a quitte. Paix a son ame..." <<endl <<endl;
+    cout<< "Mortecouille!!! " << getNom()<< " nous a quitte! Paix a son ame..." <<endl <<endl;
 }
 
 //getter
@@ -89,7 +89,7 @@ void Personnage::setNom(string n){
 //borner les données rentrées
 void Personnage::setPv(int p){
     if (p < 0) {
-        cerr << getNom() << " a un montant de point de vie incorrect" << endl << endl;
+        cerr << "Les points de vie de "<< getNom() << " sont tombes a 0 !" << endl << endl;
         pv = 0;
         this->~Personnage();
     }
@@ -211,9 +211,52 @@ void Personnage::fiche()
 	cout << "Resistance aux Attaques Magiques : " << getResistancemagique() << endl;
 	cout << "Degres de Corruption : " << getCorruption() << endl;
 	cout << "Fidele du Culte " << getCroyance() << endl;
-	cout << "Sans classe" << endl;
+	cout << "Sans classe" << endl << endl;
 }
 
-/*void Personnage::attack(Personnage & cible){
-    cible.setPv(cible.getPv() - (getAtk() + arme.getDegats());
-}*/
+void Personnage::attaque(Personnage* cible){
+
+    cout<< getNom() << " attaque " << cible->getNom() << " !!!" << endl;
+
+    float random1 = rand()%100;
+    float random2 = rand()%100;
+    float random3 = rand()%100;
+
+    if(random1 <= (cible->getBlocage()*100)){
+        cout << cible->getNom() << " pare l'attaque !" << endl << endl;
+    }
+
+    else if(random2 <= (cible->getEsquive()*100)) {
+        cout << cible->getNom() << " esquive !" << endl << endl;
+    }
+
+    else if(random3 <= (getCritique()*100)) {
+
+        cout<< "C'est un Coup de Maitre, Monseigneur !  " << getNom() << " inflige " << ((getAtk() /*+ arme.getDegats()*/ - (getCorruption()*3))*(1-(cible->getArmure()/100))*2) << " degats!"<< endl;
+        cible->setPv (cible->getPv() - ((getAtk() /*+ arme.getDegats()*/ - (getCorruption()*3))*(1-(cible->getArmure()/100))*2));
+
+    }
+
+    else {
+
+        cout<< getNom() << " inflige " << ((getAtk() /*+ arme.getDegats()*/ - (getCorruption()*3))*(1-(cible->getArmure()%100))) << " degats!"<< endl;
+        cible->setPv (cible->getPv() - ((getAtk() /*+ arme.getDegats()*/ - (getCorruption()*3))*(1-(cible->getArmure()%100))));
+
+    }
+
+    //perte pv = (atk + degat - corruption) * (1-(armure/100))
+
+    /*armure =10
+
+    1 - 10/100 = 1- 0.1 = 0.9
+    atk+degat-corruption * 0.9
+
+    1- 50/100 = 1 - 0.5 = 0.5
+    atk+degat-corruption * 0.5*/
+
+
+    //perte de PV = ((Atk + dégat) * armure )/100
+    /*if(cible -> pv==0){
+        cible->~Personnage();
+    }*/
+}

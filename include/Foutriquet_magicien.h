@@ -9,7 +9,7 @@ class Foutriquet_magicien : public Personnage
     public:
         Foutriquet_magicien();
         Foutriquet_magicien(string,int, int, int, int, float, float, float, int, int, int);
-        void showInfoFoutriquet_magicien ();
+
 
     protected:
 

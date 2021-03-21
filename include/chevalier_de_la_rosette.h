@@ -10,7 +10,7 @@ class chevalier_de_la_rosette: public Personnage
         chevalier_de_la_rosette();
         chevalier_de_la_rosette(string,int, int, int, int, float, float, float, int, int, int);
 
-        void showInfoChevalier_de_la_rosette();
+        void charge(Personnage* cible);
 
     protected:
 

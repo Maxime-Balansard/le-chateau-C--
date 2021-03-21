@@ -221,6 +221,7 @@ void Personnage::attaque(Personnage* cible){
     float random1 = rand()%100;
     float random2 = rand()%100;
     float random3 = rand()%100;
+    float random4 = rand()%7;
 
     if(random1 <= (cible->getBlocage()*100)){
         cout << cible->getNom() << " pare l'attaque !" << endl << endl;
@@ -232,15 +233,15 @@ void Personnage::attaque(Personnage* cible){
 
     else if(random3 <= (getCritique()*100)) {
 
-        cout<< "C'est un Coup de Maitre, Monseigneur !  " << getNom() << " inflige " << ((getAtk() /*+ arme.getDegats()*/ - (getCorruption()*3))*(1-(cible->getArmure()/100))*2) << " degats!"<< endl;
-        cible->setPv (cible->getPv() - ((getAtk() /*+ arme.getDegats()*/ - (getCorruption()*3))*(1-(cible->getArmure()/100))*2));
+        cout<< "C'est un Coup de Maitre, Monseigneur !  " << getNom() << " inflige " << (((getAtk() /*+ arme.getDegats()*/ - (getCorruption()*3))*(1-(cible->getArmure()/100))*2) + random4 - 3) << " degats!"<< endl;
+        cible->setPv ((cible->getPv() - ((getAtk() /*+ arme.getDegats()*/ - (getCorruption()*3))*(1-(cible->getArmure()/100))*2)) + random4 - 3);
 
     }
 
     else {
 
-        cout<< getNom() << " inflige " << ((getAtk() /*+ arme.getDegats()*/ - (getCorruption()*3))*(1-(cible->getArmure()/100))) << " degats!"<< endl;
-        cible->setPv (cible->getPv() - ((getAtk() /*+ arme.getDegats()*/ - (getCorruption()*3))*(1-(cible->getArmure()/100))));
+        cout<< getNom() << " inflige " << (((getAtk() /*+ arme.getDegats()*/ - (getCorruption()*3))*(1-(cible->getArmure()/100))) + random4 - 3) << " degats!"<< endl;
+        cible->setPv (cible->getPv() - ((getAtk() /*+ arme.getDegats()*/ - (getCorruption()*3))*(1-(cible->getArmure()/100)))  + random4 - 3);
 
     }
 
@@ -259,4 +260,12 @@ void Personnage::attaque(Personnage* cible){
     /*if(cible -> pv==0){
         cible->~Personnage();
     }*/
+}
+
+void Personnage::garde() {
+
+    cout << getNom() << " adopte une position defensive." << endl << endl;
+
+    setBlocage(getBlocage + (getBlocage * 1.2));
+
 }

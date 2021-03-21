@@ -9,7 +9,8 @@ class Coureuse_de_rempart : public Personnage
     public:
         Coureuse_de_rempart();
         Coureuse_de_rempart(string,int, int, int, int, float, float, float, int, int, int);
-        void showInfoCoureuse_de_rempart ();
+
+        void fourberie(Personnage* cible);
     protected:
 
     private:

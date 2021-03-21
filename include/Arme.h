@@ -16,7 +16,7 @@ class Arme
 
     public:
         Arme();
-        Arme( int, int,string,int, float);
+        Arme(int, int, string, int, float);
         virtual ~Arme();
 
         int getDegats();

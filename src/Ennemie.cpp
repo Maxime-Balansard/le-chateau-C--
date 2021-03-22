@@ -29,10 +29,10 @@ void Ennemie::attaqueEnnemie(Personnage* cible) {
 
         cout<< "C'est une attaque demoniaque, Monseigneur !  " << getNom() << " inflige " << ((getAtk()*(1-(cible->getArmure()/100))*2) + random4 - 3) << " degats!"<< endl;
         cible->setPv((cible->getPv() - (getAtk())*(1-(cible->getArmure()/100))*2) + random4 - 3);
-            if(random5 <= (getCorruption()*2){
+         /*   if(random5 <= (getCorruption()*2){
                 cible->setCorruption(cible->getCorruption + 1);
                 cout << " Oh non! L'attaque noircie l'esprit de " << cible->getNom() << " ! Il subit 1 dégat de corruption et en compte maintenant " << cible->getCorruption << " !" << endl << endl;
-        };
+        };*/
 
     }
 
@@ -40,10 +40,10 @@ void Ennemie::attaqueEnnemie(Personnage* cible) {
 
         cout<< getNom() << " inflige " << ((getAtk()*(1-(cible->getArmure()/100))) + random4 - 3) << " degats!"<< endl;
         cible->setPv(cible->getPv() - (getAtk()*(1-(cible->getArmure()/100)))  + random4 - 3);
-            if(random5 <= getCorruption()){
+        /*    if(random5 <= getCorruption()){
                 cible->setCorruption(cible->getCorruption + 1);
                 cout << " Oh non! L'attaque noircie l'esprit de " << cible->getNom() << " ! Il subit 1 dégat de corruption et en compte maintenant " << cible->getCorruption << " !" << endl << endl;
-        }
+        }*/
 
     }
 
@@ -62,6 +62,6 @@ void Ennemie::attaqueEnnemie(Personnage* cible) {
     /*if(cible -> pv==0){
         cible->~Personnage();
     }*/
-}
+
 
 }

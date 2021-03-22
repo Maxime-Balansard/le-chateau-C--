@@ -266,6 +266,6 @@ void Personnage::garde() {
 
     cout << getNom() << " adopte une position defensive." << endl << endl;
 
-    setBlocage(getBlocage + (getBlocage * 1.2));
+    setBlocage(getBlocage() + (getBlocage() * 1.2));
 
 }

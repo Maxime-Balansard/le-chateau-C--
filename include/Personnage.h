@@ -77,6 +77,7 @@ class Personnage
     //fonctions
     void fiche();
     void attaque(Personnage* cible);
+    void garde();
 };
 
 
